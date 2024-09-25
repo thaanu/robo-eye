@@ -23,8 +23,15 @@ body {
     height: 100%;
     position: fixed;
     z-index: 1000;
+    opacity: 0.2;
+}
+
+.grid1 {
     background: url(grid.png) center center;
-    opacity: 0.3;
+}
+
+.grid2 {
+    background: url(grid4.png) center center;
 }
 
 .wrapper {
