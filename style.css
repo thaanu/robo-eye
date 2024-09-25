@@ -27,12 +27,22 @@ body {
     opacity: 0.3;
 }
 
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 1000px;
+}
+
 .container {
     display: flex;
     justify-content: center;
     gap: 40px;
     align-items: center;
     height: 400px;
+    width: 1000px;
     animation: moving 15s infinite;
 }
 
