@@ -1,0 +1,169 @@
+:root {
+    --green: #30db07;
+    --red:#ff0000;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: black;
+}
+
+#controls {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 1001;
+}
+
+.grid {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    background: url(grid.png) center center;
+    opacity: 0.3;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    height: 400px;
+    animation: moving 15s infinite;
+}
+
+.eye {
+    height: 200px;
+    width: 180px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 30% 31% 33% 34% / 17% 15% 14% 13% ;
+    background: rgb(0, 214, 0);
+    box-shadow: 0 0 60px rgb(0, 214, 0);
+}
+
+#right-eye { right: 20%; }
+
+#left-eye { left: 30%; }
+
+.look-right {
+    border-radius: 20px 200px 180px 20px;
+    border-radius: 0% 100% 100% 0% / 0% 45% 55% 100% ;
+    height: 150px;
+    transform: translateX(100px);
+}
+
+.look-left {
+    border-radius: 200px 20px 20px 180px;
+    height: 150px;
+    transform: translateX(-100px);
+    /* border-radius: 20px 200px 180px 20px; */
+}
+
+.look-sad-left {
+    height: 100px;
+    width: 240px;
+    border-radius:4% 0% 90% 6% / 47% 15% 75% 37% ;
+}
+
+.look-sad-right {
+    height: 100px;
+    width: 240px;
+    border-radius: 0% 4% 9% 81% / 9% 58% 25% 75%;
+}
+
+.face1 {
+    border-radius: 84% 8% 12% 68% / 81% 28% 38% 0%;
+}
+
+.look-angry-right {
+    background: red;
+    border-radius: 7% 85% 77% 15% / 37% 84% 0% 38%;
+    height: 150px;
+    width: 220px;
+    box-shadow: 0 0 60px rgb(245, 2, 2);
+}
+
+.look-angry-left {
+    background: red;
+    border-radius: 84% 8% 12% 68% / 81% 28% 38% 0%;
+    height: 150px;
+    width: 220px;
+    box-shadow: 0 0 60px rgb(245, 2, 2);
+}
+
+.small-eye {
+    height: 80px;
+    width: 80px;
+}
+
+.blinking {
+    animation: blink 0.2s;
+}
+
+.winking {
+    animation: wink 0.5s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+@keyframes blink {
+    0% {
+        height: 200px;
+    }
+    50% {
+        height: 2px;
+    }
+    100% {
+        height: 200px;
+    }
+}
+
+@keyframes wink {
+    0% {
+        height: 200px;
+        width: 200px;
+    }
+    10% {
+        height: 220px;
+        width: 220px;
+    }
+    50% {
+        height: 2px;
+        width: 200px;
+    }
+    75% {
+        height: 2px;
+        width: 200px;
+    }
+    100% {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@keyframes moving {
+    0% {
+        transform: translate(0,0);
+    }
+    10% {
+        transform: translate(10px,10px);
+    }
+    50% {
+        transform: translate(0,0);
+    }
+    64% {
+        transform: translate(-10px,-10px);
+    }
+    75% {
+        transform: translate(-15px,-15px);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
